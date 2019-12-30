@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	int i,j;
+	for(i=1;i<=n;i++)
+	{
+		if(i==1||i==n)
+		{//第一行与最后一行的操作
+			for(j=1;j<=n;j++)
+				printf("*");
+		}
+		else
+		{
+			for(j=1;j<=n;j++)
+			{
+				if(j==1||j==n)
+					printf("*");
+				else
+					printf(" ");
+			}
+		}
+		printf("\n");
+	}
+	return 0;
+
+}

@@ -7,6 +7,6 @@ int main()
 	scanf("%lf",&r);
 	L=2*P*r;
 	S=P*r*r;
-	printf("%.2lf,%.2lf",L,S);
+	printf("%.2lf %.2lf\n",L,S);
 	return 0;
 }

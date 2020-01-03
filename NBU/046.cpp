@@ -4,8 +4,8 @@ int main()
 	char a;
 	scanf("%c",&a);
 	if(a>='a'&&a<='z'||a>='A'&&a<='Z')
-		printf("YES");
+		printf("YES\n");
 	else
-		printf("NO");
+		printf("NO\n");
 	return 0;
 }

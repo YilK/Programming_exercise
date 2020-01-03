@@ -11,7 +11,7 @@ int main()
 		printf("%.2lf\n",s );
 	}
 	else//不符合要求
-		printf("%s\n","Error");
+		printf("Error\n");
 	return 0;
 
 }

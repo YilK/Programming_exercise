@@ -2,11 +2,14 @@
 #include <math.h>
 int main()
 {
-	int n;
-	double number=0;
-	scanf("%d",&n);
-	for(int i =1;i<=64;i++)
-		number=number+pow(2,i-1);
-	printf("%lf\n",number);
+	int i,m,a;
+	unsigned __int64 s=0;
+	scanf("%d",&m);
+	for(i=0;i<m;i++)
+	{
+		a=pow(2,i);
+		s=s+a;
+	}
+	printf("%I64u\n",s);
 	return 0;
 }

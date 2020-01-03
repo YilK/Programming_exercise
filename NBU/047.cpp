@@ -5,7 +5,9 @@ int main()
 	scanf("%c",&letter);
 	if(letter>='a'&&letter<='z')
 		printf("%c\n",letter-32 );
-	if(letter>='A'&&letter<='Z')
+	else if(letter>='A'&&letter<='Z')
 		printf("%c\n",letter+32);
+	else 
+		printf("%c\n",letter );
 	return 0;
 }

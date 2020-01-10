@@ -15,6 +15,6 @@ int main()
 		if(a==str[i])
 			count++;
 	}
-	printf("%d",count);
+	printf("%d\n",count);
 	return 0;
 }

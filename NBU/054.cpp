@@ -8,12 +8,12 @@ int main()
 	{
 		scanf("%c",&x);
 		if(x==a){
-			printf("%c",x);
+			printf("%c\n",x);
 			return 0;
 		}
 		else
 			a=x;
 	}
-	printf("No");
+	printf("No\n");
 	return 0;
 }

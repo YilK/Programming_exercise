@@ -18,6 +18,7 @@ int main()
 		{
 			t++;
 		}
+	//进行插入
 	num=s1[m];
 	int j=1;
 	for(i=m;j<=t;i++)
@@ -31,3 +32,4 @@ int main()
 	cout<<s1<<endl;
 	return 0;
 }
+/*关键是一个stl的使用 string 

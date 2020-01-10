@@ -14,7 +14,7 @@ int main()
 		else
 			sum2=sum2+i;//奇数和
 	}
-	printf("%d\n",sum1 );//输出偶数和
-	printf("%d\n",sum2 );//输出奇数和
+	printf("%d\n",sum2 );//输出偶数和
+	printf("%d\n",sum1 );//输出奇数和
 	return 0;
 }

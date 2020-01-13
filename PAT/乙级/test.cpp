@@ -1,12 +1,16 @@
-#include <iostream>
-using namespace std;
-int main() {
-	int n;
-	scanf("%d", &n);
-	for (int i = 0; i < n; i++) {
-		long long int a, b, c;
-		scanf("%lld%lld%lld", &a, &b, &c);
-		printf("Case #%d: %s\n", i + 1, a + b > c ? "true" : "false");
+#include <iostream> 
+#include <stack> 
+using namespace std; 
+int main() {    
+	stack<string> v;    
+	string s;    
+	while(cin >> s) v.push(s);    
+	cout << v.top();    
+	v.pop();    
+	while(!v.empty()) 
+	{        
+		cout << " " << v.top();        
+		v.pop();    
+		}    
+	return 0; 
 	}
-	return 0;
-}

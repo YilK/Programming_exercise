@@ -22,11 +22,9 @@ int main()
 			jiab=jiab.substr(0,2);
 			reverse(jiab.begin(),jiab.end()); 
 			yi=stoi(jiab);
-//			cout<<jia<<' '<<yi<<endl;
 			if(abs(jia-yi)/x==yi/y)
 			{
 				bing=yi/y;
-//				cout<<jia<<' '<<yi<<' '<<bing<<endl;
 				cout<<jia<<' ';
 				if(jia>m)
 					cout<<"Cong"<<' ';

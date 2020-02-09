@@ -1,15 +1,17 @@
 #include <iostream>
 #include <algorithm>
 using namespace std;
-int judge(int a)
-{
-	for(int i=2;i<=sqrt(a);i++)
-		if(a%i==0)	return -1;
-	return 1;
-}
+bool isPalindrome(int x) {
+    string s1=to_string(x);
+    string s2=s1;
+    string s2=reverse(s1.begin(),s1.begin()+len);
+    if(s1==s2)
+        return true;
+    else
+        return false;
+} 
 int main()
 {
-	cout<<judge(49877);
-	return 0;
+	return 0; 
 }
 

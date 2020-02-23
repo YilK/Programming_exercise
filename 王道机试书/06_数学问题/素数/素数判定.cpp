@@ -12,10 +12,14 @@ int main()
 	int n;
 	while(cin>>n)
 	{
-		if(judge(n)==-1)
-			cout<<"no"<<endl;
-		else
-			cout<<"yes"<<endl;
+        if(n==1)
+            cout<<"no"<<endl;
+        else{
+		    if(judge(n)==-1)
+			    cout<<"no"<<endl;
+		    else
+			    cout<<"yes"<<endl;
+        }
 	}
 	return 0;
 }

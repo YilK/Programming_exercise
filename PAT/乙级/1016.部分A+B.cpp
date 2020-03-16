@@ -1,26 +1,26 @@
-#include <stdio.h>
-#include <string>
 #include <iostream>
+#include <string>
 using namespace std;
 int main()
 {
-	string a,b;
-	int da,db;
-	cin>>a>>da>>b>>db;//输入
-	int pa=0,pb=0;
-	for(int i=0;i<a.length();i++)
+	string sa;
+	char a;
+	string sb;
+	char b;
+	int i;
+	int suma=0,sumb=0;
+	cin>>sa>>a>>sb>>b;
+	for(i=0;i<sa.size();i++)
 	{
-		if(da==a[i]-'0')
-			pa=pa*10+da;	
+		if(sa[i]==a)
+			suma=suma*10+(a-'0');
 	}
-	for(int i=0;i<b.length();i++)
+	for(i=0;i<sb.size();i++)
 	{
-		if(db==b[i]-'0')
-			pb=pb*10+db;
+		if(sb[i]==b)
+			sumb=sumb*10+(b-'0');
 	}
-	printf("%d\n",pa+pb);
-//	cout<<a<<da<<b<<db;
-	return 0; 
-} 
-/*利用string 引入#include <string>
-遍历字符串中字符  利用字符所对应的十进制进行比对 
+	cout<<suma+sumb;
+	return 0;
+
+}

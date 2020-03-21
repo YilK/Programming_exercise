@@ -1,49 +1,67 @@
-#include <iostream> //score 20
+#include <iostream>
 #include <string>
+#include <map>
 using namespace std;
 int main()
 {
-	string s1;
-	string s2="";
-	string s3="PATest";
-	cin>>s1;
-	for(int i=0;i<s1.size();i++)
-		if(s3.find(s1[i])!=string::npos)
-			s2+=s1[i];
-	while(s2.size()!=0)
+	string s;
+	cin>>s;
+	int i;
+	map<int,char> m;
+	m[1]='A';
+	m[2]='T';
+	m[3]='e';
+	m[4]='s';
+	m[5]='t';m[0]='P';
+	int a[6]={0};
+	int num=0;
+	for(i=0;i<s.size();i++)
 	{
-		if(s2.find('P')!=string::npos)
+		if(s[i]=='P')
 		{
-			cout<<'P';
-			s2.erase(s2.begin()+s2.find('P'));
+			a[0]++;
+			num++;
 		}
-		if(s2.find('A')!=string::npos)
+		else if(s[i]=='A')
 		{
-			cout<<'A';
-			s2.erase(s2.begin()+s2.find('A'));
+			a[1]++;
+			num++;
 		}
-		if(s2.find('T')!=string::npos)
+		else if(s[i]=='T')
 		{
-			cout<<'T';
-			s2.erase(s2.begin()+s2.find('T'));
+			a[2]++;
+			num++;
 		}
-		if(s2.find('e')!=string::npos)
+		else if(s[i]=='e')
 		{
-			cout<<'e';
-			s2.erase(s2.begin()+s2.find('e'));
+			a[3]++;
+			num++;
 		}
-		if(s2.find('s')!=string::npos)
+		else if(s[i]=='s')
 		{
-			cout<<'s';
-			s2.erase(s2.begin()+s2.find('s'));
-		}		
-		if(s2.find('t')!=string::npos)
-		{
-			cout<<'t';
-			s2.erase(s2.begin()+s2.find('t'));
+			a[4]++;
+			num++;
 		}
-		
-	}
-	return 0;	
-}
+		else if(s[i]=='t')
+		{
+			a[5]++;
+			num++;
+		}
 
+	}
+
+	while(num>0)
+	{
+		for(i=0;i<6;i++)
+		{
+			if(a[i]>0)
+			{
+				cout<<m[i];
+				a[i]--;
+				num--;
+			}
+		}
+	}
+	cout<<endl;
+	return 0;
+}

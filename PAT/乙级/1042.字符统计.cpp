@@ -1,30 +1,36 @@
-#include <iostream> //score 20
+#include <iostream>
 #include <string>
 #include <cctype>
-#include <stdio.h>
 using namespace std;
 int main()
 {
 	string s;
-	getline(cin,s);//输入，不能用cin 
-	int num[128]={0};// ASCII表对应的十进制是数组下标 
-	for(int i=0;i<s.size();i++)
+	getline(cin,s);
+	int a[26]={0};
+	int i;
+	for(i=0;i<s.size();i++)
 	{
-		if(isalpha(s[i]))//判断是否是字母 
+		if(isalpha(s[i]))
 		{
-			s[i]=tolower(s[i]);//转换为小写 
-			num[s[i]-NULL]++;//注意null 
+			if(isupper(s[i]))
+			{
+				a[s[i]-'A']++;
+			}
+			else
+				a[s[i]-'a']++;
 		}
 	}
-	int max=-1,mp=-1;//求最大次数的字母 
-	for(int i=0;i<127;i++)
+	int min=a[0];
+	int min_=0;
+	for(i=1;i<26;i++)
 	{
-		if(max<num[i])
+		if(min<a[i])
 		{
-			max=num[i];
-			mp=i;
+			min=a[i];
+			min_=i;
 		}
 	}
-	printf("%c %d",mp,max);//输出 
-	return 0;	
-} 
+	char c=min_+'a';
+	cout<<c<<' '<<min<<endl;
+	return 0;
+}

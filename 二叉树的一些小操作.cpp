@@ -79,3 +79,51 @@ int main()
 	CreatBitTree(T);
 }
 
+//µÚ¶þÖÖ 
+#include<bits/stdc++.h>
+
+using namespace std;
+typedef struct node{
+	
+	char data;
+	struct node *lchild,*rchild;
+}*BiTree;
+int i;
+void CreatTree(BiTree &T,string s){
+	if(i>s.size()-1)
+	 return ;
+	
+	if(s[i]=='#'){
+		i++;
+		T==NULL;
+	}
+	else{
+		T=new node;
+		T->data=s[i++];
+		T->lchild=NULL;
+		T->rchild=NULL;
+		CreatTree(T->lchild,s);
+		CreatTree(T->rchild,s);
+	}
+}
+void inorder(BiTree &T){
+	
+	if(T!=NULL){
+		inorder(T->lchild);
+		cout<<T->data<<" ";
+		inorder(T->rchild);
+	}
+}
+int main(){
+	string s;
+	while(cin>>s){
+		
+		i=0;
+		BiTree T=NULL;
+	    CreatTree(T,s);
+	    inorder(T);
+	    cout<<endl;
+	}
+	
+	return 0;
+} 
